@@ -11,7 +11,14 @@ for (let i = 0; i < 2; i++) {
     let question1 = prompt("Один из последних просмотреных фильмов?"),
         question2 = prompt("На сколько оцените его?");
 
-    personalMovieDB.movies[question1] = question2;
+    if (question1 != null && question2 != null && question1 != '' && question2 != '' && question1.length < 50) {
+        personalMovieDB.movies[question1] = question2;
+        console.log('Done');
+    } else {
+        console.log('error');
+        i--;
+    }
+
 }
 
-console.log(personalMovieDB);::::::
+console.log(personalMovieDB);
