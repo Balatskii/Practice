@@ -1,4 +1,4 @@
-let numberOfFilms = prompt("Сколько фильмов вы посмотрели");
+let numberOfFilms = +prompt("Сколько фильмов вы посмотрели");
 let personalMovieDB = {
 
     count: numberOfFilms,
@@ -26,8 +26,8 @@ if (personalMovieDB.count < 10) {
 } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
     console.log("Ви класический зритель");
 } else if (personalMovieDB.count >= 30) {
-console.log("Вы киноман");
-}else {
+    console.log("Вы киноман");
+} else {
     console.log("Произошла ошибка");
 }
 
